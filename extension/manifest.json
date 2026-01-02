@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Car Scout",
+  "version": "0.1.0",
+  "description": "Rip Facebook Marketplace car listings for local analysis",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://www.facebook.com/marketplace/*",
+    "http://localhost:9876/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/marketplace/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

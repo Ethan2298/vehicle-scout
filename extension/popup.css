@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  width: 280px;
+  background: #1a1a2e;
+  color: #eee;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #16213e;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffc107;
+}
+
+.status.connected .status-dot {
+  background: #4caf50;
+}
+
+.status.disconnected .status-dot {
+  background: #f44336;
+}
+
+.status.on-marketplace .status-dot {
+  background: #4caf50;
+}
+
+.page-info {
+  padding: 8px 12px;
+  background: #16213e;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.rip-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background: #0f3460;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rip-btn:hover:not(:disabled) {
+  background: #1a4a7a;
+}
+
+.rip-btn:disabled {
+  background: #2a2a4a;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #16213e;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.result.success {
+  border-left: 3px solid #4caf50;
+}
+
+.result.error {
+  border-left: 3px solid #f44336;
+}
+
+.hidden {
+  display: none;
+}

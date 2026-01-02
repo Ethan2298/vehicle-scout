@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Scout</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Car Scout</h1>
+
+    <div id="status" class="status">
+      <span class="status-dot"></span>
+      <span id="status-text">Checking...</span>
+    </div>
+
+    <div id="page-info" class="page-info hidden">
+      <p id="listing-count">0 listings detected</p>
+    </div>
+
+    <button id="rip-btn" class="rip-btn" disabled>
+      Rip Listings
+    </button>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

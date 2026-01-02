@@ -1,7 +1,7 @@
 ---
 id: task-1
 title: Set up web app with shadcn UI and local storage
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-01-02 23:17'
 labels: [setup, frontend]
@@ -27,13 +27,13 @@ A web application for tracking and managing vehicle information, stored locally 
 
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
-- [ ] #1 Next.js project created with TypeScript and App Router
-- [ ] #2 Tailwind CSS installed and configured
-- [ ] #3 shadcn/ui initialized with at least 3 base components (Button, Card, Input)
-- [ ] #4 Local storage utility module created with get/set/remove functions
-- [ ] #5 Basic app layout with header, main content area, and responsive design
-- [ ] #6 Development server runs without errors on localhost:3000
-- [ ] #7 Project builds successfully with no TypeScript errors
+- [x] #1 Next.js project created with TypeScript and App Router
+- [x] #2 Tailwind CSS installed and configured
+- [x] #3 shadcn/ui initialized with at least 3 base components (Button, Card, Input)
+- [x] #4 Local storage utility module created with get/set/remove functions
+- [x] #5 Basic app layout with header, main content area, and responsive design
+- [x] #6 Development server runs without errors on localhost:3000
+- [x] #7 Project builds successfully with no TypeScript errors
 <!-- AC:END -->
 
 ## Implementation Plan
@@ -174,3 +174,23 @@ vehicle-scout/
 - [Next.js Docs](https://nextjs.org/docs)
 - [shadcn/ui Docs](https://ui.shadcn.com)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
+
+## File Activity
+
+### Created
+- `.gitignore` — git ignore rules
+- `package.json` — project config
+- `tsconfig.json` — TypeScript config
+- `next.config.ts` — Next.js config
+- `postcss.config.mjs` — PostCSS config
+- `eslint.config.mjs` — ESLint config
+- `components.json` — shadcn/ui config
+- `src/app/layout.tsx` — root layout with Header
+- `src/app/page.tsx` — home page with Card/Button
+- `src/app/globals.css` — Tailwind + shadcn CSS vars
+- `src/components/Header.tsx` — app header
+- `src/components/ui/button.tsx` — shadcn Button
+- `src/components/ui/card.tsx` — shadcn Card
+- `src/components/ui/input.tsx` — shadcn Input
+- `src/lib/storage.ts` — local storage utility
+- `src/lib/utils.ts` — shadcn cn() utility

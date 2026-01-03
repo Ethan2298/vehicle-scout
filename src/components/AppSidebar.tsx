@@ -1,6 +1,7 @@
 "use client"
 
 import { Home, Car, Settings } from "lucide-react"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   Sidebar,
@@ -22,6 +23,11 @@ const navItems = [
 export function AppSidebar() {
   const pathname = usePathname()
 
+  const isActive = (href: string) => {
+    if (!pathname) return false
+    return href === "/" ? pathname === "/" : pathname.startsWith(href)
+  }
+
   return (
     <Sidebar>
       <SidebarHeader className="border-b px-4 py-3">
@@ -31,21 +37,16 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => {
-                const isActive = item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href)
-                return (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={isActive}>
-                      <a href={item.href}>
-                        <item.icon className="size-4" />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                )
-              })}
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={isActive(item.href)}>
+                    <Link href={item.href}>
+                      <item.icon className="size-4" />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

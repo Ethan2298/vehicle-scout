@@ -26,11 +26,6 @@ describe('AppSidebar', () => {
     expect(screen.getByText('Settings')).toBeInTheDocument()
   })
 
-  it('renders the app title in sidebar header', () => {
-    renderWithProvider(<AppSidebar />)
-
-    expect(screen.getByText('Vehicle Scout')).toBeInTheDocument()
-  })
 
   it('marks Dashboard as active on home page', () => {
     mockPathname.mockReturnValue('/')

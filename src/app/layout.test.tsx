@@ -23,7 +23,6 @@ describe('RootLayout', () => {
       </RootLayout>
     )
 
-    expect(screen.getByText('Vehicle Scout')).toBeInTheDocument()
     expect(screen.getByText('Dashboard')).toBeInTheDocument()
   })
 
